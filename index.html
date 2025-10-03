@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <title>Anna Patricia Nanteza – ECE | Robotics & Controls</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <style>
+        :root{
+            --navy:#0B1F3B;
+            --pink:#FF0066;
+            --grey:#F2F6FA;
+            --white:#FFFFFF;
+            --glass:rgba(255,255,255,.08);
+        }
+        *{box-sizing:border-box;margin:0;padding:0;font-family:'Segoe UI',Arial,sans-serif;}
+        html{scroll-behavior:smooth;}
+        body{background:var(--navy);color:var(--white);line-height:1.6;}
+        a{color:var(--pink);text-decoration:none;}
+        h1,h2,h3{letter-spacing:.5px;}
+        img{max-width:100%;display:block;}
+        /* ---------- NAV ---------- */
+        nav{position:fixed;top:0;width:100%;background:rgba(11,31,59,.85);backdrop-filter:blur(8px);z-index:1000;}
+        nav ul{display:flex;justify-content:center;list-style:none;padding:1rem}
+        nav li{margin:0 1.2rem}
+        nav a{color:var(--white);font-weight:600;text-transform:uppercase;font-size:.9rem;transition:.3s}
+        nav a:hover{color:var(--pink)}
+        /* ---------- HERO ---------- */
+        #hero{height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:0 1rem}
+        .profile{width:180px;height:180px;border-radius:50%;border:4px solid var(--pink);margin:0 auto 1rem;object-fit:cover}
+        .typing{font-size:2.2rem;font-weight:700;margin:.5rem 0}
+        .typing::after{content:"";display:inline-block;width:2px;height:2.2rem;background:var(--pink);animation:blink .8s infinite}
+        @keyframes blink{50%{opacity:0}}
+        .btn{display:inline-block;margin-top:1.2rem;padding:.8rem 2rem;background:var(--pink);color:var(--white);border-radius:30px;font-weight:600;transition:.3s}
+        .btn:hover{background:#e6005c;transform:translateY(-2px)}
+        /* ---------- SECTIONS ---------- */
+        section{padding:5rem 1rem;max-width:1100px;margin:auto}
+        .section-title{text-align:center;font-size:2rem;margin-bottom:2.5rem;position:relative}
+        .section-title::after{content:"";width:60px;height:4px;background:var(--pink);position:absolute;left:50%;transform:translateX(-50%);bottom:-10px}
+        /* ---------- SKILLS ---------- */
+        .skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1.5rem}
+        .skill-card{background:var(--glass);padding:1.5rem;border-radius:12px;text-align:center;backdrop-filter:blur(6px);transition:.3s}
+        .skill-card:hover{transform:translateY(-5px);background:rgba(255,0,102,.15)}
+        .skill-card i{font-size:2.2rem;margin-bottom:.7rem;color:var(--pink)}
+        /* ---------- PROJECTS ---------- */
+        .projects{display:flex;gap:2rem;overflow-x:auto;padding-bottom:1rem}
+        .project{min-width:300px;background:var(--glass);border-radius:12px;padding:1.5rem;backdrop-filter:blur(6px)}
+        .project h3{margin-bottom:.5rem;color:var(--pink)}
+        /* ---------- TIMELINE ---------- */
+        .timeline{position:relative;padding:2rem 0}
+        .timeline::before{content:"";position:absolute;left:10px;top:0;height:100%;width:3px;background:var(--pink)}
+        .timeline-item{background:var(--glass);margin:1rem 0 1rem 30px;padding:1.2rem;border-radius:8px;position:relative}
+        .timeline-item::before{content:"";position:absolute;left:-39px;top:1.2rem;width:15px;height:15px;border-radius:50%;background:var(--pink)}
+        /* ---------- CONTACT ---------- */
+        form{display:grid;gap:1rem}
+        input,textarea{width:100%;padding:.8rem;border:none;border-radius:8px;background:var(--glass);color:var(--white)}
+        input::placeholder,textarea::placeholder{color:#ccc}
+        /* ---------- FOOTER ---------- */
+        footer{text-align:center;padding:2rem 1rem;font-size:.85rem;color:#aaa}
+        /* ---------- SOCIAL ---------- */
+        .social{margin-top:1.5rem}
+        .social a{margin:0 .7rem;font-size:1.6rem;transition:.3s}
+        .social a:hover{color:var(--pink)}
+        /* ---------- RESPONSIVE ---------- */
+        @media(min-width:900px){
+            .typing{font-size:2.8rem}
+            .projects{overflow-x:visible;display:grid;grid-template-columns:1fr 1fr 1fr}
+        }
+    </style>
+</head>
+<body>
+<!-- NAV -->
+<nav>
+    <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#timeline">Timeline</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+    <div>
+        <img src="profile.jpg" alt="Anna Patricia Nanteza" class="profile">
+        <h1 class="typing">Anna Patricia Nanteza</h1>
+        <p>Electrical & Computer Engineer | Robotics · Controls · IoT</p>
+        <a href="#contact" class="btn">Hire Me</a>
+    </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+    <h2 class="section-title">Core Skills</h2>
+    <div class="skills-grid">
+        <div class="skill-card"><i class="fab fa-java"></i><h3>Java</h3></div>
+        <div class="skill-card"><i class="fab fa-python"></i><h3>Python</h3></div>
+        <div class="skill-card"><i class="fas fa-microchip"></i><h3>Embedded C</h3></div>
+        <div class="skill-card"><i class="fas fa-robot"></i><h3>ROS2</h3></div>
+        <div class="skill-card"><i class="fas fa-cogs"></i><h3>PLC / Ladder</h3></div>
+        <div class="skill-card"><i class="fas fa-drafting-compass"></i><h3>CAD / DraftSight</h3></div>
+    </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+    <h2 class="section-title">Signature Projects</h2>
+    <div class="projects">
+        <div class="project">
+            <h3>Condition-Monitoring System</h3>
+            <p>147 industrial sensors · 15 custom control boxes · Saved Ford $23 k/min downtime.</p>
+        </div>
+        <div class="project">
+            <h3>AI Vision Quality-Control</h3>
+            <p>Computer-vision seat inspection · 1 k+ images · Reduced rework & recalls.</p>
+        </div>
+        <div class="project">
+            <h3>Autonomous Smart Suitcase</h3>
+            <p>Capstone lead · ROS2 navigation · TSA-compliant battery · IoT HMI app.</p>
+        </div>
+    </div>
+</section>
+
+<!-- TIMELINE -->
+<section id="timeline">
+    <h2 class="section-title">Experience & Education</h2>
+    <div class="timeline">
+        <div class="timeline-item">
+            <h3>Controls Engineering Intern</h3>
+            <span>Jun – Aug 2025 | LM Manufacturing</span>
+            <p>Designed 147-sensor monitoring rig; commissioned $88 k Balluff order; updated PLC logic → +15 % uptime.</p>
+        </div>
+        <div class="timeline-item">
+            <h3>Classroom & Lab Support Specialist</h3>
+            <span>Jun 2023 – Present | Eastern Michigan University</span>
+            <p>Maintain 200+ lab machines; automate OS deployments; Tier-1/2 hardware support.</p>
+        </div>
+        <div class="timeline-item">
+            <h3>B.S. Electrical & Computer Engineering</h3>
+            <span>Apr 2026 | Eastern Michigan University</span>
+            <p>Dean’s List · GPA 3.8/4.0 · Treasurer, Society of Women Engineers.</p>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+    <h2 class="section-title">Let’s Connect</h2>
+    <p>Ready to cut downtime, boost quality, and launch next-gen products? Drop a message.</p>
+    <form action="https://formspree.io/f/xeojkjyy" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn">Send Message</button>
+    </form>
+    <div class="social">
+        <a href="https://linkedin.com/in/anna-nanteza" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/AnnaPatricia-N" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://discord.gg/hdwtGR5dxp" target="_blank" aria-label="Discord"><i class="fab fa-discord"></i></a>
+        <a href="mailto:nantezaannapatricia@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>© 2025 Anna Patricia Nanteza – Designed from scratch with 💗 & hardware.</footer>
+
+<!-- tiny JS for typing effect -->
+<script>
+    const txt="Electrical & Computer Engineer | Robotics · Controls · IoT";
+    let i=0;
+    function type(){document.querySelector('.typing').textContent=txt.slice(0,i++);}
+    setInterval(type,80);
+</script>
+</body>
+</html>
